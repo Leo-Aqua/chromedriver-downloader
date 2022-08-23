@@ -51,3 +51,11 @@ else:
 >104.0.5112.79
 >
 >105.0.5195.19
+
+
+# Features:
+1. Automatically get correct chromedriver version
+2. Yust add it to the top of your code
+3. After downloading chromedriver once, It won't affect speed of your script at all!
+
+###### Made with code by Leo Aqua
