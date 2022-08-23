@@ -8,11 +8,11 @@ import requests
 import os
 from zipfile import ZipFile
 from win32com.client import Dispatch
-if os.path.exists('chromedriver.exe'):
+if os.path.exists('chromedriver.exe'): # Check if chromedriver.exe exists
     print('Chromedriver executable exists, skipping')
 else:
     print('Downloading chromedriver executable...')
-    def get_version_via_com(filename):
+    def get_version_via_com(filename): # Get Chrome version using Dispatch
         parser = Dispatch("Scripting.FileSystemObject")
         try:
             crm_version = parser.GetFileVersion(filename)
@@ -33,7 +33,7 @@ else:
     ver = crm_version.startswith('105')
     if ver == True:
         ncrm_version = '105.0.5195.19'
-    url = f'https://chromedriver.storage.googleapis.com/{ncrm_version}/chromedriver_win32.zip'
+    url = f'https://chromedriver.storage.googleapis.com/{ncrm_version}/chromedriver_win32.zip' # Download Chromedriver
     response = requests.get(url)
     open("driver.zip", "wb").write(response.content)
     zf = ZipFile('driver.zip', 'r')
