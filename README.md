@@ -43,3 +43,10 @@ zf.extractall('.')
 zf.close()
 os.remove('driver.zip')
 ```
+
+## Currently supported versions:
+>103.0.5060.134
+>
+>104.0.5112.79
+>
+>105.0.5195.19
